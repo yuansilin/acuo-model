@@ -11,13 +11,17 @@ apply from: "https://raw.githubusercontent.com/anaxo-io/gradle-plugins/master/ja
 
 group = 'com.acuo.collateral'
 
-ext.versions += [
-        strata       : '1.3.3'
-]
-
 dependencies {
-    compile(
+
+    implementation(
         "com.opengamma.strata:strata-basics:${versions.strata}",
         "com.opengamma.strata:strata-product:${versions.strata}",
+    )
+
+    implementation (
+        "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${versions.jackson}",
+        "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}",
+        "com.fasterxml.jackson.datatype:jackson-datatype-joda:${versions.jackson}",
+        "com.xebia:jackson-lombok:${versions.xebia}"
     )
 }

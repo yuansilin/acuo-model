@@ -4,7 +4,6 @@ import com.acuo.common.model.margin.Types;
 import com.opengamma.strata.basics.currency.Currency;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -22,4 +21,12 @@ public class BilateralDetails {
     private Double marginTermDeliverRoundingAmount;
     private Double marginTermReturnMinimumTransferAmount;
     private Double marginTermReturnRoundingAmount;
+    private String marginTermDeliverRoundingMethod;
+    private String marginTermReturnRoundingMethod;
+    private Double marginTermThresholdAmount;
+    private String marginTermThresholdTreatment;
+    private String marginTermNotificationTime;
+    private String marginTermNotificationTimeZone;
+    private LocalDateTime marginTermStartDate;
+    private LocalDateTime marginTermEndDate;
 }

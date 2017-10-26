@@ -1,4 +1,4 @@
-package com.acuo.common.model.ids;
+package com.acuo.common.ids;
 
 import com.acuo.common.type.TypedString;
 import com.fasterxml.jackson.annotation.JsonCreator;

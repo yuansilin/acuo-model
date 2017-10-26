@@ -5,8 +5,6 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Map;
-import java.util.Set;
 
 @Data
 public class TradeInfo {
@@ -14,6 +12,7 @@ public class TradeInfo {
     private String tradingAccountId;
     private LocalDate tradeDate;
     private LocalDateTime tradeTime;
+    private LocalDate effectiveDate;
     private LocalDate maturityDate;
     private String clearedTradeId;
     private LocalDate clearedTradeDate;

@@ -1,9 +1,10 @@
 package com.acuo.common.model.ids
 
+import com.acuo.common.ids.PortfolioId
 import com.fasterxml.jackson.databind.ObjectMapper
 import spock.lang.Specification
 
-class PortfolioIdTest extends Specification {
+class PortfolioIdSpec extends Specification {
     def "FromString"() {
         when:
         ObjectMapper om = new ObjectMapper()
