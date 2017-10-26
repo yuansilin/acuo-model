@@ -1,8 +1,9 @@
 package com.acuo.common.model.ids;
 
 import com.acuo.common.type.TypedString;
-import com.acuo.common.util.ArgChecker;
 import org.joda.convert.FromString;
+
+import java.util.Objects;
 
 public class TradeId extends TypedString<TradeId> {
 
@@ -12,7 +13,7 @@ public class TradeId extends TypedString<TradeId> {
 
     @FromString
     public static TradeId fromString(String id) {
-        ArgChecker.notNull(id, "id");
+        Objects.requireNonNull(id, "id");
         return new TradeId(id);
     }
 

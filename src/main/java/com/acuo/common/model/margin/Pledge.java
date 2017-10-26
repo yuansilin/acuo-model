@@ -1,14 +1,16 @@
 package com.acuo.common.model.margin;
 
 import com.acuo.common.model.margin.Types.SecurityIdType;
-import com.acuo.common.util.Utils;
 import com.opengamma.strata.basics.currency.Currency;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 
 @Data
 public class Pledge implements Comparable<Pledge>{
+
+    private static Comparator<String> nullSafeStringComparator = Comparator.nullsFirst(String::compareTo);
 
     private String callAmpId;
     private String pledgeAmpId;
@@ -29,6 +31,6 @@ public class Pledge implements Comparable<Pledge>{
 
     @Override
     public int compareTo(Pledge other) {
-        return Utils.nullSafeStringComparator.compare(this.callAmpId, other.callAmpId);
+        return nullSafeStringComparator.compare(this.callAmpId, other.callAmpId);
     }
 }

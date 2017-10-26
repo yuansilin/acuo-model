@@ -1,10 +1,11 @@
 package com.acuo.common.model.ids;
 
 import com.acuo.common.type.TypedString;
-import com.acuo.common.util.ArgChecker;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.convert.FromString;
+
+import java.util.Objects;
 
 public class PortfolioId extends TypedString<PortfolioId> {
 
@@ -15,7 +16,7 @@ public class PortfolioId extends TypedString<PortfolioId> {
     @FromString
     @JsonCreator
     public static PortfolioId fromString(@JsonProperty("name") String id) {
-        ArgChecker.notNull(id, "id");
+        Objects.requireNonNull(id, "id");
         return new PortfolioId(id);
     }
 

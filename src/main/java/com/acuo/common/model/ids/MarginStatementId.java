@@ -1,8 +1,9 @@
 package com.acuo.common.model.ids;
 
 import com.acuo.common.type.TypedString;
-import com.acuo.common.util.ArgChecker;
 import org.joda.convert.FromString;
+
+import java.util.Objects;
 
 public class MarginStatementId extends TypedString<MarginStatementId> {
 
@@ -12,7 +13,7 @@ public class MarginStatementId extends TypedString<MarginStatementId> {
 
     @FromString
     public static MarginStatementId fromString(String id) {
-        ArgChecker.notNull(id, "id");
+        Objects.requireNonNull(id, "id");
         return new MarginStatementId(id);
     }
 }

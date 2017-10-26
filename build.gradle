@@ -12,25 +12,12 @@ apply from: "https://raw.githubusercontent.com/anaxo-io/gradle-plugins/master/ja
 group = 'com.acuo.collateral'
 
 ext.versions += [
-        eclipselink  : '2.6.3',
         strata       : '1.3.3'
 ]
 
 dependencies {
     compile(
-            "org.joda:joda-convert:1.9",
-            "com.google.code.findbugs:jsr305:3.0.1",
-            "org.eclipse.jetty:jetty-servlet:9.3.5.v20151012",
-            "org.eclipse.persistence:eclipselink:${versions.eclipselink}",
-            "org.jasypt:jasypt:1.9.2",
-            "com.opengamma.strata:strata-basics:${versions.strata}",
-            "com.opengamma.strata:strata-product:${versions.strata}",
-            "com.thetransactioncompany:cors-filter:2.5",
-            "com.hazelcast:hazelcast:3.8"
-    )
-
-    testCompile(
-            "org.apache.httpcomponents:httpclient:4.3.3",
-            "org.slf4j:log4j-over-slf4j:${versions.slf4j}"
+        "com.opengamma.strata:strata-basics:${versions.strata}",
+        "com.opengamma.strata:strata-product:${versions.strata}",
     )
 }
